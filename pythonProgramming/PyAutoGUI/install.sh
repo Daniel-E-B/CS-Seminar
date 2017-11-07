@@ -1,3 +1,7 @@
+echo installing brew
+
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
 echo installing python3
 
 brew install python3
