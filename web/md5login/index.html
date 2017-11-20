@@ -2,20 +2,20 @@
 <head>
     <title>
     </title>
+    <link rel="stylesheet" href="style.css">
     <script src="JavaScript-MD5/js/md5.min.js"></script>
     <script src="main.js"></script>
 </head>
 <body>
 
     <div id="loginBox">
-        <div id="textEntry">
+        <div id="usernameArea">
             Username: <input id ="usernameInput" type="text" name="username">
-            <br>
-            Password: <input id="passwordInput" type="text" name="password">
         </div>
-        <div id="submitButton">
-            <input type="button" name="submitBTN" value="Login" onclick="formChanged()">
+        <div id="passwordarea">
+            Password: <input id="passwordInput" type="text" name="password"type="password">
         </div>
+        <div id="submitButton" onclick="formChanged()">Login</div>
     </div>
     <div id="userContent">
         Error, not logged in
