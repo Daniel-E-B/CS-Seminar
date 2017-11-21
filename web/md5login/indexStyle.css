@@ -1,0 +1,68 @@
+body{
+    background-color: lightblue;
+    font-family:sans-serif;
+}
+
+#uselessSpace{
+    padding:3.5rem;
+}
+
+#loginBox{
+text-align:center;
+padding:0.5rem;
+padding-bottom: 2rem;
+height: 8rem;
+border-radius:1.75rem;
+border: 1px solid black;
+width:16rem;
+margin:auto;
+background-color:lightgray;
+}
+
+#usernameArea{
+    text-align:center;
+    margin-top:1rem;
+    margin-bottom:0.5rem;
+}
+#passwordArea{
+    text-align:center;
+}
+
+a{
+    color:black;
+}
+#createAccountBTN{
+    background-color:white;
+    width:5rem;
+    height:1.5rem;
+    border-radius:1rem;
+    user-select:none;
+    cursor:pointer;
+    padding-top: 0.3rem;
+    margin:auto;
+    display:inline-block;
+    text-decoration:none;
+}
+#createAccountBTN:active{
+    background-color:#42a4f4;
+}
+
+#submitButton{
+    background-color:lightgreen;
+    width:4rem;
+    height:1.5rem;
+    border-radius:1rem;
+    margin:auto;
+    margin-top:1rem;
+    margin-bottom:1rem;
+    user-select:none;
+    cursor:pointer;
+    padding-top: 0.3rem;
+    display:inline-block;
+}
+#submitButton:active{
+    background-color:#42a4f4;
+}
+#userContent{
+    padding:0rem;
+}

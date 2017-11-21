@@ -21,16 +21,47 @@ function formChanged(){
     if (!user)
         return;
     
-    document.getElementById("userContent").innerHTML=user.userData;
+    document.getElementById("userData").innerHTML=user.userData;
 }
 
 function getUser(username,pass){
-    for(i=0; i<users.length; i++){
+    for(var i=0; i<users.length; i++){
         var user = users[i];
         if (username !== user.username || pass !== user.hashedPass)
             continue;
         
         return user;
     }
-    document.getElementById("userContent").innerHTML="Incorrect username or password";
+    document.getElementById("loginStatus").innerHTML="Incorrect username or password";
+}
+
+function createAccount(){
+    var newName=document.getElementById("usernameInput").value;
+    var p1=md5(document.getElementById("passwordInput").value);
+    var p2=md5(document.getElementById("passwordConfirm").value);
+    if(!p2||!p1||!newName){
+        document.getElementById("OutputMessage").innerHTML="Please fill out all fields";
+        return;
+    }else{
+        document.getElementById("OutputMessage").innerHTML="";
+        //check if the username already exists!
+        for(var i=0; i<users.length; i++){
+            var user = users[i];
+            var nameNotTaken=true;
+            if (newName == user.username){
+                nameNotTaken=false;
+                break;
+            }
+        }
+        if(nameNotTaken==false){
+            document.getElementById("OutputMessage").innerHTML="Sorry, that username is already taken";
+            return;
+        }
+        if(p1!=p2){
+            document.getElementById("OutputMessage").innerHTML="The passwords are different";
+            return;
+        }
+        users.push(new User(newName,p1,"change this text"));
+        window.location="index.html";
+    }
 }

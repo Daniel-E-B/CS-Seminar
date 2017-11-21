@@ -1,0 +1,54 @@
+body{
+    background-color: lightblue;
+    font-family:sans-serif;
+}
+
+#signUpBox{
+    text-align:center;
+    padding:0.5rem;
+    padding-top:1rem;
+    padding-bottom: 2rem;
+    height: 8rem;
+    border-radius:1.75rem;
+    border: 1px solid black;
+    width:21rem;
+    margin:auto;
+    background-color:lightgray;
+}
+#usernameArea{
+    padding-bottom:0.5rem;
+}
+#password1{
+    padding-bottom:0.5rem;
+}
+#password2{
+    padding-bottom:0.5rem;
+}
+
+a{
+    color:black;
+}
+
+#signUp{
+    border-radius:1rem;
+    background-color:lightgreen;
+    margin:auto;
+    margin-top:1rem;
+    margin-bottom:1rem;
+    user-select:none;
+    cursor:pointer;
+    padding-top: 0.2rem;
+    display:inline-block;
+    text-decoration:none;
+    width:4rem;
+    height:1.2rem;
+}
+#signUp:active{
+    background-color:#42a4f4;
+}
+#uselessSpace{
+    padding:3.5rem;
+}
+#outputMessage{
+    padding-bottom:0.2rem;
+}
