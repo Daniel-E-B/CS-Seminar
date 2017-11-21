@@ -7,8 +7,9 @@ class User {
 }
 
 var users=[];
-
-users.push(new User("Admin","827ccb0eea8a706c4c34a16891f84e7b","Yay, you logged in!"))
+var socket = io.connect('http://localhost');
+users.push(new User("Admin","827ccb0eea8a706c4c34a16891f84e7b","Yay, you logged in!"));
+socket.emit('userlist',users);
 //the password is "12345"
 
 //make it so that other people can add users. Maybe a different html page?
@@ -21,7 +22,7 @@ function formChanged(){
     if (!user)
         return;
     
-    document.getElementById("userData").innerHTML=user.userData;
+    document.getElementById("loginStatus").innerHTML=user.userData;
 }
 
 function getUser(username,pass){
@@ -62,6 +63,7 @@ function createAccount(){
             return;
         }
         users.push(new User(newName,p1,"change this text"));
+        socket.emit('userlist',users);
         window.location="index.html";
     }
 }
