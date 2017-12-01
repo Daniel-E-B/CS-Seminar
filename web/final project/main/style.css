@@ -1,3 +1,26 @@
 body{
     background-color:#8B4513;
+    margin:0px;
+    padding:0px;
+    font-family:arial;
+}
+
+#CPS{
+    padding-bottom:0.2rem;
+}
+
+#factoryInfo{
+    margin: 1rem;
+    text-align: center;
+}
+#cookiePanel{
+    width: 256px;
+    margin-left: 1rem;
+}
+#cookieDiv{
+    cursor:hand;
+    border-radius:180px;
+}
+#cookieDiv:active{
+    content:url("invertedCookie.png");
 }
