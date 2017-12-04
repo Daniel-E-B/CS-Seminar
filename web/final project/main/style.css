@@ -24,3 +24,25 @@ body{
 #cookieDiv:active{
     content:url("invertedCookie.png");
 }
+
+#buyingPanel{
+    position: absolute;
+    top:0px;
+    left:18rem;
+    margin-top:1rem;
+}
+#buyHelper{
+    user-select: none;
+}
+.buyButton{
+    cursor:hand;
+    border-radius:1rem;
+    color:lightskyblue;
+    background-color:black;
+    padding:1rem;
+}
+
+.buyButton:active{
+    background-color:lightgreen;
+    color:black;
+}

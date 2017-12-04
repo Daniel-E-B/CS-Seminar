@@ -10,13 +10,21 @@
     <script src="main.js"></script>
   <div id="cookiePanel">
     <div id="factoryInfo">
-      <div id="CPS">filler text cps</div>
-      <div id="cookieCounter">0</div>
+      <div id="CPS">Per Second: 0</div>
+      <div id="cookieCounter">0 cookies</div>
     </div>
     <div id="cookieDiv" onclick="cookies++, 
-    document.getElementById('cookieCounter').innerHTML=cookies">
+    document.getElementById('cookieCounter').innerHTML=Math.floor(cookies)+' cookies'">
       <img id "cookieImage" src="https://upload.wikimedia.org/wikipedia/commons/e/e5/Crystal_Project_cookie.png" height="256" width="256">
       <!--I tried making a click() function, but it didnt work and jen and i couldnt figure out why-->
+    </div>
+  </div>
+
+  <div id="buyingPanel">
+    <div class="buyButton" id="buyHelper" onclick="items.push(new Helper())">
+      Pay a helper to help you make cookies
+      <br>
+      -15 cookies
     </div>
   </div>
     

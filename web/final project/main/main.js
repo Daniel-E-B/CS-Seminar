@@ -1,4 +1,4 @@
-var cookies=15;
+var cookies=0;
 var frames=0;
 var CPS=0;
 
@@ -15,7 +15,7 @@ class Item{
 
 class Helper extends Item{
     constructor(){
-        super(1,15);
+        super(0.1,15);
     }
 }
 
@@ -23,15 +23,15 @@ var updater;
 
 function update(){
     cookies+=CPS;
-    document.getElementById('CPS').innerHTML=CPS;
-    document.getElementById('cookieCounter').innerHTML=cookies;
+    document.getElementById('CPS').innerHTML="Per Second: "+CPS;
+    document.getElementById('cookieCounter').innerHTML=Math.floor(cookies)+" cookies";
     //it cant find numCookies, probably b/c it hasnt been created
 }
 
 var items=[];
 
 window.onload = function(){
-    items.push(new Helper());
+    //items.push(new Helper());
     updater = setInterval(update, 1000);
 }
 
