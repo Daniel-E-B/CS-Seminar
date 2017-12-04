@@ -85,7 +85,7 @@ var ovens=0;
 var helpers=0;
 
 function update(){
-    cookies+=CPS;
+    cookies+=CPS/100;
     document.getElementById('CPS').innerHTML="Per Second: "+CPS.toFixed(1);//show 1dp
     document.getElementById('cookieCounter').innerHTML=Math.floor(cookies)+" cookies";
 
@@ -147,6 +147,6 @@ var items=[];
 
 window.onload = function(){
     //items.push(new Helper());
-    updater = setInterval(update, 1000);
+    updater = setInterval(update, 10);
 }
 
