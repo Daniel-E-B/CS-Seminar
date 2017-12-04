@@ -4,12 +4,16 @@
   <title>cOOKiEClICkeR</title>
   
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
 </head>
 
 <body>
     <script src="main.js"></script>
   <div id="cookiePanel">
     <div id="factoryInfo">
+      <div id="cookiePanelTitle">
+        Bob's Cookies
+      </div>
       <div id="CPS">Per Second: 0</div>
       <div id="cookieCounter">0 cookies</div>
     </div>
@@ -24,8 +28,69 @@
     <div class="buyButton" id="buyHelper" onclick="items.push(new Helper())">
       Pay a helper to help you make cookies
       <br>
-      -15 cookies
+      -15 cookies, +0.1 CPS
     </div>
+    <div class="buyButton" id="buyOven" onclick="items.push(new Oven())">
+      Buy an EZ bake oven
+      <br>
+      -100 cookies, +1 CPS
+    </div>
+    <div class="buyButton" id="buyFarm" onclick="items.push(new Farm())">
+      Buy a CERTIFIED ORGANIC cookie farm
+      <br>
+      -1300 cookies, +8 CPS
+    </div>
+    <div class="buyButton" id="buyMine" onclick="items.push(new Mine())">
+      Make children in Africa mine cookies
+      <br>
+      -15,000 cookies, +47 CPS
+    </div>
+    <div class="buyButton" id="buyFactory" onclick="items.push(new Factory())">
+      Make workers in China build cookies
+      <br>
+      -180,000 cookies, +420 CPS
+    </div>
+
+    <div class="buyButton" id="buyBank" onclick="items.push(new Bank())">
+        Buy a bank to for your cookies
+        <br>
+        -2M cookies, +2,500 CPS
+      </div>
+
+    <div class="buyButton" id="buyTemple" onclick="items.push(new Temple())">
+        Build a temple for your followers
+        <br>
+         -28M cookies, +15,000 CPS
+       </div>
+
+    <div class="buyButton" id="buyTower" onclick="items.push(new Tower())">
+      Buy a tower to store cookies in
+      <br>
+       -420M cookies, +88,000 CPS
+     </div>       
+
+   <div class="buyButton" id="buyShipment" onclick="items.push(new Shipment())">
+       Buy a shipment of cookies
+       <br>
+        -6.2B cookies, +540,000 CPS
+      </div>   
+
+  </div>
+  <div id="statsTitle">
+    Stats:
+    <br>
+    <div id="statsData">
+      <div class="stat"id="numHelpers">0 Helpers</div>
+      <div class="stat"id="numOvens">0 Ovens</div>
+      <div class="stat"id="numFarms">0 Farms</div>
+      <div id="numMines"class="stat">0 Mines</div>
+      <div class="stat"id="numFactories">0 Factories</div>
+      <div class="stat"id="numBanks">0 Banks</div>
+      <div class="stat"id="numTemples">0 Temples</div>
+      <div class="stat"id="numTowers">0 Towers</div>
+      <div class="stat"id="numShipments">0 Shipments</div>
+    </div>
+    
   </div>
     
 </body>

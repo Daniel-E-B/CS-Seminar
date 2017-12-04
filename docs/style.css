@@ -5,6 +5,28 @@ body{
     font-family:arial;
 }
 
+#cookiePanelTitle{
+    font-size:3rem;
+    font-family: 'Shadows Into Light', cursive;
+}
+
+#statsTitle{
+    width:256px;
+    font-size:3rem;
+    font-family: 'Shadows Into Light', cursive;
+    margin-left:auto;
+    text-align:center;
+    margin-left:1rem;
+}
+
+#statsData{
+    font-size:1.5rem;
+    font-family: 'arial';
+}
+.stat{
+    padding-bottom:0.4rem;
+}
+
 #CPS{
     padding-bottom:0.2rem;
 }
@@ -28,10 +50,7 @@ body{
 #buyingPanel{
     position: absolute;
     top:0px;
-    left:18rem;
-    margin-top:1rem;
-}
-#buyHelper{
+    left:20rem;
     user-select: none;
 }
 .buyButton{
@@ -40,6 +59,7 @@ body{
     color:lightskyblue;
     background-color:black;
     padding:1rem;
+    margin-top:1rem;
 }
 
 .buyButton:active{
