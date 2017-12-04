@@ -6,9 +6,11 @@ class Item{
     constructor(CPSBoost, cost){
         this.CPSBoost=CPSBoost;
         this.cost=cost;
+        this.created=false;//it might be in items, but they might not have enough cookies
         if(cookies>=this.cost){
             cookies-=this.cost;
             CPS+=this.CPSBoost;
+            this.created=true;
         }
     }
 }
@@ -100,31 +102,31 @@ function update(){
     for (var j=0;j<items.length; j++){
         i=items[j];
         //it didn't work when I did a for..in loop. dont know why
-        if(i instanceof Helper){
+        if(i instanceof Helper&&i.created==true){
             helpers++;
         }
-        else if(i instanceof Oven){
+        else if(i instanceof Oven&&i.created==true){
             ovens++;
         }
-        else if(i instanceof Farm){
+        else if(i instanceof Farm&&i.created==true){
             farms++;
         }
-        else if(i instanceof Mine){
+        else if(i instanceof Mine&&i.created==true){
             mines++;
         }
-        else if(i instanceof Factory){
+        else if(i instanceof Factory&&i.created==true){
             factories++;
         }
-        else if(i instanceof Bank){
+        else if(i instanceof Bank&&i.created==true){
             banks++;
         }
-        else if(i instanceof Temple){
+        else if(i instanceof Temple&&i.created==true){
             temples++;
         }
-        else if(i instanceof Tower){
+        else if(i instanceof Tower&&i.created==true){
             towers++;
         }
-        else if(i instanceof Shipment){
+        else if(i instanceof Shipment&&i.created==true){
             shipments++;
         }
     }
