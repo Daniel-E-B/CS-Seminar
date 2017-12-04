@@ -51,7 +51,6 @@ body{
     position: absolute;
     top:0px;
     left:20rem;
-    user-select: none;
 }
 .buyButton{
     cursor:hand;
@@ -60,6 +59,8 @@ body{
     background-color:black;
     padding:1rem;
     margin-top:1rem;
+    user-select: none;
+    
 }
 
 .buyButton:active{
