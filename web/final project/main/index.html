@@ -10,11 +10,11 @@
     <script src="main.js"></script>
   <div id="cookiePanel">
     <div id="factoryInfo">
-      <div id="CPF">filler text cps</div>
-      <div id="numCookies">0</div>
+      <div id="CPS">filler text cps</div>
+      <div id="cookieCounter">0</div>
     </div>
-    <div id="cookieDiv"
-    onclick="cookies++">
+    <div id="cookieDiv" onclick="cookies++, 
+    document.getElementById('cookieCounter').innerHTML=cookies">
       <img id "cookieImage" src="https://upload.wikimedia.org/wikipedia/commons/e/e5/Crystal_Project_cookie.png" height="256" width="256">
       <!--I tried making a click() function, but it didnt work and jen and i couldnt figure out why-->
     </div>
