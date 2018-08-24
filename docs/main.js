@@ -73,6 +73,32 @@ class Shipment extends Item{
 
 //im gonna stop now
 
+//cookie functions, sourced from: https://www.quirksmode.org/js/cookies.html
+function createCookie(name,value,days) {
+	if (days) {
+		var date = new Date();
+		date.setTime(date.getTime()+(days*24*60*60*1000));
+		var expires = "; expires="+date.toGMTString();
+	}
+	else var expires = "";
+	document.cookie = name+"="+value+expires+"; path=/";
+}
+
+function readCookie(name) {
+	var nameEQ = name + "=";
+	var ca = document.cookie.split(';');
+	for(var i=0;i < ca.length;i++) {
+		var c = ca[i];
+		while (c.charAt(0)==' ') c = c.substring(1,c.length);
+		if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+	}
+	return null;
+}
+
+function eraseCookie(name) {
+	createCookie(name,"",-1);
+}
+
 var updater;
 var shipments=0;
 var towers=0;
@@ -87,7 +113,7 @@ var helpers=0;
 function update(){
     cookies+=CPS/100;
     document.getElementById('CPS').innerHTML="Per Second: "+CPS.toFixed(1);//show 1dp
-    document.getElementById('cookieCounter').innerHTML=Math.floor(cookies)+" cookies";
+    document.getElementById('cookieCounter').innerHTML=Math.floor(cookies);+" cookies";
 
     //silly way of finding how many of each object
     shipments=0;
